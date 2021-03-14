@@ -1,0 +1,22 @@
+{
+  "name": "gh-discord-logger",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nbur4556/gh-discord-logger.git"
+  },
+  "author": "Nick Burt",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nbur4556/gh-discord-logger/issues"
+  },
+  "homepage": "https://github.com/nbur4556/gh-discord-logger#readme",
+  "dependencies": {
+    "discord.js": "^12.5.1"
+  }
+}
