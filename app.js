@@ -11,3 +11,4 @@ client.on('ready', () => {
 // On event, send message to github channel
 
 // Log in bot using token from https://discord.com/developers/applications
+client.login(process.env.DISCORD_TOKEN);
