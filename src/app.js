@@ -7,8 +7,12 @@ client.on('ready', () => {
     console.log('client is ready...');
 });
 
-// Create event listener for update from github
-// On event, send message to github channel
+// Discord event listeners
+client.on('message', message => {
+    if (message.content === 'ping') {
+        console.log('pong')
+    }
+});
 
 // Log in bot using token from https://discord.com/developers/applications
 client.login(process.env.DISCORD_TOKEN);
