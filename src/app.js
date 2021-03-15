@@ -11,7 +11,7 @@ client.on('ready', () => {
 // Discord event listeners
 client.on('message', message => {
     if (message.content === 'ping') {
-        client.channels.cache.get('820830834180489226').send('pong');
+        message.channel.send('pong');
     }
 });
 
