@@ -5,12 +5,13 @@ const client = new Discord.Client();
 // Connect to Discord
 client.on('ready', () => {
     console.log('client is ready...');
+    // client.channels.cache.get('820830834180489226').send('Hello world!')
 });
 
 // Discord event listeners
 client.on('message', message => {
     if (message.content === 'ping') {
-        console.log('pong')
+        client.channels.cache.get('820830834180489226').send('pong');
     }
 });
 
