@@ -1,17 +1,26 @@
 require('dotenv').config();
 const Discord = require('discord.js');
-const client = new Discord.Client();
+const githubConnection = require('./api/githubConnection.js');
 
 // Connect to Discord
+const client = new Discord.Client();
 client.on('ready', () => {
     console.log('client is ready...');
-    // client.channels.cache.get('820830834180489226').send('Hello world!')
 });
 
 // Discord event listeners
 client.on('message', message => {
     if (message.content === 'ping') {
         message.channel.send('pong');
+    }
+    else if (message.content === 'get github events') {
+        githubConnection.getEvents('nbur4556', 'gh-discord-logger').then(({ data }) => {
+            for (const event of data) {
+                message.channel.send(event.id);
+                message.channel.send(event.type);
+                message.channel.send(event.created_at);
+            }
+        });
     }
 });
 
